@@ -1,0 +1,109 @@
+.works {
+  height: 90%;
+}
+
+.history {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: var(--h1-color); */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.history span {
+  cursor: pointer;
+  transition: all .5s;
+  font-size: 1.2rem;
+}
+
+.history span:hover {
+  transform: scale(1.2);
+}
+
+.enterprise-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.work-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40%;
+}
+
+.job-description {
+  padding: 1rem;
+  background-color: var(--sec-bg-color);
+  box-shadow: 10px 5px 5px black;
+}
+
+.jobs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.job {
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all .5s;
+}
+
+.job:hover {
+  transform: scale(1.2);
+  color: var(--h1-color);
+}
+
+@media (max-width: 768px) {
+  .enterprise-works {
+    flex-direction: column;   
+  }
+
+  .work-description {
+    width: 90%;
+  }
+
+  .badges {
+    display: none;
+  }
+}
+
+.cedisa .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--sec-bg-color);
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cedisa .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--sec-bg-color) transparent transparent transparent;
+}
+
+.cedisa:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
