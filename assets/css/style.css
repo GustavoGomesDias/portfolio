@@ -1,0 +1,109 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+
+  background: var(--bg-color);
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  animation: toShow 1s ease-in-out forwards;
+  transform: translateY(0%) translateX(0%);
+}
+
+.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
+.swiper-container-vertical>.swiper-pagination-progressbar {
+  position: absolute;
+  left: 95%;
+  top: 25%;
+  height: 50%;
+}
+
+.scroll {
+  z-index: 99;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 1px;
+  width: 10px;
+  height: 120px;
+  background-color: var(--h2-color);
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.bar {
+  position: relative;
+  top: 0px;
+  content: " ";
+  width: 100%;
+  height: 15px;
+  border-radius: 25px;
+  background-color: var(--text-color);
+
+  animation: scroller 1s ease infinite;
+}
+
+.scroll-info {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 135px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+  .sections {
+    width: 95%;
+  }
+}
+
+@keyframes scroller {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 100px;
+  }
+}
+
+@keyframes toShow {
+  from {
+    opacity: 0;
+    transform: translateY(15%) translateX(-15%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%) translateX(0%);
+  }
+}

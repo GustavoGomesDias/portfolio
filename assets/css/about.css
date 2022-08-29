@@ -1,0 +1,74 @@
+.name::before {
+  content: "<Gustavo Gomes Dias />";
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--h1-color),
+    0 0 82px var(--h1-color),
+    0 0 92px var(--h1-color),
+    0 0 102px var(--h1-color),
+    0 0 151px var(--h1-color);
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nets {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume {
+  border: 1px solid var(--text-color);
+  width: 150px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.resume a {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.resume:hover {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+.resume:hover a {
+  color: var(--bg-color);
+}
+
+.resume:hover svg {
+  stroke: var(--bg-color);
+}
+
+@media (max-width: 980px) {
+  .profile-image {
+    display: none;
+  }
+}

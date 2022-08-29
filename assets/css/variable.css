@@ -1,0 +1,13 @@
+:root {
+  --bg-color: #0D1117;
+  --sec-bg-color: #161B22;
+  --text-color: #ed3b65;
+  --h1-color: #d55d92;
+  --h2-color: #7209b7;
+  --button-color: #ed3b65;
+}
+
+/* 
+  Change --swiper-theme-color value to change swiper bar color
+
+*/
