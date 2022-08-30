@@ -125,6 +125,11 @@ input {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
   color: var(--text-color);
   font-size: 1.1rem;
+  transition: all .5s;
+}
+
+input:focus {
+  transform: scale(1.5);
 }
 
 button {
@@ -151,8 +156,12 @@ textarea {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
   color: var(--text-color);
   font-size: 1.1rem;
+  transition: all 500ms;
 }
 
+textarea:focus {
+  transform: scale(1.5);
+}
 
 form {
   width: 40%;
@@ -173,5 +182,13 @@ form {
 
   form {
     width: 80%;
+  }
+
+  input:focus {
+    transform: scale(1.2);
+  }
+
+  textarea:focus {
+    transform: scale(1.2);
   }
 }
