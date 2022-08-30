@@ -70,3 +70,20 @@ window.addEventListener(
   false
 );
 
+
+let showNickName = true;
+const nameH1 = document.querySelector('.name');
+
+nameH1.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (!showNickName) {
+    nameH1.classList.add('no-nickname');
+    nameH1.classList.remove('nickname');
+  } else {
+    nameH1.classList.add('nickname');
+    nameH1.classList.remove('no-nickname');
+  }
+
+  showNickName = !showNickName;
+});

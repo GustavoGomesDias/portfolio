@@ -1,5 +1,22 @@
-.name::before {
+.name {
+  cursor: pointer;
+}
+
+.no-nickname::before {
   content: "<Gustavo Gomes Dias />";
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--h1-color),
+    0 0 82px var(--h1-color),
+    0 0 92px var(--h1-color),
+    0 0 102px var(--h1-color),
+    0 0 151px var(--h1-color);
+}
+
+.nickname::before {
+  content: "<Wood />";
   text-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
@@ -70,5 +87,15 @@
 @media (max-width: 980px) {
   .profile-image {
     display: none;
+  }
+}
+
+@keyframes changeMyName {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
