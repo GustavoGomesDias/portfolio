@@ -80,7 +80,7 @@ const projects = [{
   title: 'Projetos Pessoais',
   name: 'Prag.Money$_',
   video: 'jKUOi56XYm4',
-  description: 'App de gestão financeira, que ajuda a você trackear seus gastos. É possível adicionar todo tipo de conta, além de pode usar mais de uma conta no hora de cadastrar um gasto. Também é possível gerar relatórios para cada conta, além de poder exportar seus dados. Esse projeto é um mono repo, contando com a aplicação de patterns e TDD para o backend.',
+  description: 'App de gestão financeira, que ajuda a você trackear seus gastos. É possível adicionar todo tipo de conta, além de pode usar mais de uma conta no hora de cadastrar um gasto. Também é possível gerar relatórios para cada conta, além de poder exportar seus dados. Esse projeto é um mono repo, contando com a aplicação de patterns e TDD para o backend. Link: https://pragmoney.vercel.app/',
   badges: `<img alt="CSS3"
   src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" />
 <img alt="JavaScript"
