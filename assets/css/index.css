@@ -135,6 +135,12 @@ button {
   background: var(--button-color);
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.7);
   font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 textarea {
