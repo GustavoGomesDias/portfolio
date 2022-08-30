@@ -15,6 +15,8 @@
   cursor: pointer;
   transition: all .5s;
   font-size: 1.2rem;
+  border: 1px solid var(--text-color);
+  padding: .8rem;
 }
 
 .history span:hover {
