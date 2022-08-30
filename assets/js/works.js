@@ -75,6 +75,65 @@ const artcom = [{
   },
 }];
 
+const projects = [{
+  id: 0,
+  title: 'Projetos Pessoais',
+  name: 'Prag.Money$_',
+  video: 'jKUOi56XYm4',
+  description: 'App de gestão financeira, que ajuda a você trackear seus gastos de forma pragmatica. Nele é possível adicionar todo tipo de conta, além de pode usar mais de uma conta no hora de cadastrar um gasto. Também é possível gerar relatórios para cada conta, além de poder exportar os dados presentes no banco em JSON. Esse projeto é um mono repo, contando com a aplicação de patterns e TDD para o backend, além de ter também o conceito Server Side Redenring aplicado.',
+  badges: `<img alt="CSS3"
+  src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" />
+<img alt="JavaScript"
+  src="https://img.shields.io/badge/javascript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+<img alt="TypeScript"
+  src="https://img.shields.io/badge/typescript-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white" />
+<img alt="React"
+  src="https://img.shields.io/badge/react-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+<img alt="NextJs"
+  src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" /> <img
+  alt="NodeJS"
+  src="https://img.shields.io/badge/node.js-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white" /> <img alt="Jest"
+  src="https://img.shields.io/badge/-jest-%23C21325?&style=for-the-badge&logo=jest&logoColor=white" />`,
+  theme: {
+    textColor: '#79E292',
+    h1Color: '#79E292',
+    h2Color: '#6E978F',
+    bgColor: '#0A213A',
+    secBgColor: '#072440',
+    buttonColor: '#3A745C',
+  },
+}, {
+  id: 1,
+  title: 'Projetos Pessoais',
+  name: 'Water Tracker',
+  video: 'mHF40E_ioyU',
+  description: 'App desktop que te ajuda a tracker o tanto de água que você tomou no dia. Ele é surgiu dos meus estudios envolvendo Golang e é meu primeiro projeto em Go também. Nele foi usado um framework chamado Wails que é responsável pelo backend, compilação e tudo que não envolve frontend (:V). O frontend do app é feito em React com TypeScript, Vite e React-router-dom.',
+  badges: `<img alt="CSS3"
+  src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" />
+<img alt="JavaScript"
+  src="https://img.shields.io/badge/javascript-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+<img alt="TypeScript"
+  src="https://img.shields.io/badge/typescript-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white" />
+<img alt="React"
+  src="https://img.shields.io/badge/react-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB" /> <img
+  alt="NodeJS"
+  src="https://img.shields.io/badge/node.js-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white" /> <img alt="Golang" src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" />`,
+  theme: {
+    textColor: '#ed3b65',
+    h1Color: '#d55d92',
+    h2Color: '#7209b7',
+    bgColor: '#0D1117',
+    secBgColor: '#161B22',
+    buttonColor: '#ed3b65',
+  },
+}];
+
+const artcomDiv = document.querySelector('.artcom');
+const cedisaDiv = document.querySelector('.cedisa');
+const projectDiv = document.querySelector('.project');
+
+let workList = projects;
+
 const enterprise = document.querySelector('.enterprise');
 const wIframe = document.querySelector('.work-iframe');
 const workDescritption = document.querySelector('.work-description');
@@ -104,27 +163,7 @@ const makeJob = (item) => {
 
 }
 
-const artcomDiv = document.querySelector('.artcom');
-const cedisaDiv = document.querySelector('.cedisa');
-
-artcomDiv.addEventListener('click', () => {
-
-  jobs.innerHTML = '';
-  for (const item of artcom) {
-    const span = document.createElement('span');
-  
-    span.classList.add('job');
-    span.innerText = item.name;
-  
-    span.addEventListener('click', () => {
-      makeJob(item);
-    });
-  
-    jobs.appendChild(span);
-  }
-})
-
-for (const item of artcom) {
+for (const item of workList) {
   const span = document.createElement('span');
 
   span.classList.add('job');
@@ -135,4 +174,44 @@ for (const item of artcom) {
   });
 
   jobs.appendChild(span);
-}
+};
+
+artcomDiv.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  workList = artcom;
+  makeJob(workList[0]);
+  jobs.innerHTML = '';
+  for (const item of workList) {
+    const span = document.createElement('span');
+  
+    span.classList.add('job');
+    span.innerText = item.name;
+  
+    span.addEventListener('click', () => {
+      makeJob(item);
+    });
+  
+    jobs.appendChild(span);
+  };
+});
+
+projectDiv.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  workList = projects;
+  makeJob(workList[0]);
+  jobs.innerHTML = '';
+  for (const item of workList) {
+    const span = document.createElement('span');
+  
+    span.classList.add('job');
+    span.innerText = item.name;
+  
+    span.addEventListener('click', () => {
+      makeJob(item);
+    });
+  
+    jobs.appendChild(span);
+  };
+});
