@@ -1,0 +1,67 @@
+header {
+  padding: 1em;
+  border-bottom: .1rem solid var(--sec-bg-color);
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-section {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  transition: all .8s;
+}
+
+.content-logo {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.wood-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.navgation {
+  display: flex;
+  gap: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  transition: all .8s;
+}
+
+.nav-item:hover {
+  color: var(--spec-text-color);
+}
+
+.contact {
+  background-color: var(--text-color);
+  padding: .8rem;
+  border-radius: 25px;
+  color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  transition: all .8s;
+}
+
+.contact:hover {
+  transform: scale(1.1);
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
