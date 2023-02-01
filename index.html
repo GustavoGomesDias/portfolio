@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="stylesheet" href="./assets/css/header.css">
   <link rel="stylesheet" href="./assets/css/about.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
   <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <title>@GustavoGomesDias</title>
@@ -17,14 +18,15 @@
 <body>
   <header>
     <div class="header-section">
-      <div class="logo special-hover">
+      <div class="logo">
         <a href="/">
-          <img src="./assets/images/logo/logo.svg" alt="Profile image logo" class="wood-logo">
+          <img src="./assets/images/logo/logo.svg" alt="Image logo" class="wood-logo">
         </a>
       </div>
       <nav class="navgation">
-        <a href="#" class="nav-item">Sobre mim</a>
-        <a href="#" class="nav-item">Experiência</a>
+        <a href="#" class="nav-item">Home</a> |
+        <a href="#" class="nav-item">Sobre mim</a> |
+        <a href="#" class="nav-item">Experiência</a> |
         <a href="#" class="nav-item">Projetos Pessoais</a>
       </nav>
       <a class="contact">
@@ -35,27 +37,29 @@
     </div>
   </header>
 
-  <div class="about" id="about">
-    <div class="about-content">
-      <p class="text-about">
-        Olá, me chamo Gustavo Gomes Dias e também conhecido como WooOd (por conta do meu nick na Twitch), tenho 23 anos
-        e faço faculdade de SI no IFES. Sou um desenvolvedor mais puxado para o backend, mas trabalho facilmente com
-        frontend também (desde que eu não seja o designer 🤭️).
-      </p>
-
-      <div class="socials">
-        <a class="socials-content special-hover" href="/">
-          <img src="/assets/images/icons/github.svg" class="img-socials">
-        </a>
-        <a class="socials-content special-hover" href="/">
-          <img src="/assets/images/icons/linkedin.svg" class="img-socials">
-        </a>
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="home-content-glass">
+        <div class="home-content-text">
+          <div class="home-content-img">
+            <img src="./assets/images/content/sudowoodo.png" alt="Image logo" class="profile-img underpose">
+            <img src="https://github.com/GustavoGomesDias.png" alt="Image logo" class="profile-img bd-radius overlap">
+          </div>
+          <span class="profile-name">Bem-vindo!</span>
+          <div class="wrapper">
+            <ul class="dynamic-txts">
+              <li><span class="dev">- Developer -</span></li>
+              <li><span>- Node.js -</span></li>
+              <li><span>- React.js -</span></li>
+              <li><span>- TypeScript -</span></li>
+              <li><span>- Python -</span></li>
+              <li><span>- PostgreSQL -</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="profile-img">
-      <img src="https://github.com/GustavoGomesDias.png" alt="">
-    </div>
-  </div>
+  </section>
 
 </body>
 <script src="/assets/js/about.js"></script>

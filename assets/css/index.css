@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /*
  Reset
@@ -158,6 +158,8 @@ html,
 body {
   position: relative;
   height: 100%;
+  overflow-clip-margin: content-box;
+  overflow-y: clip;
 }
 
 body::-webkit-scrollbar {
@@ -165,7 +167,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  font-family: 'Yanone', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: 'Space Mono', monospace, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: var(--text-color);
   background-color: var(--bg-color) !important;

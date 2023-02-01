@@ -22,23 +22,6 @@
   text-align: center;
 }
 
-.profile-img {
-  width: 50%;
-  height: 100%;
-  background-color: var(--text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.profile-img img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-
 .tec-img-content {
   display: flex;
   gap: .8rem;
